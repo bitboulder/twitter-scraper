@@ -194,6 +194,7 @@ func (s *Scraper) Login(credentials ...string) error {
 	if err != nil {
 		return err
 	}
+	fmt.Println("HALLO")
 
 	randomDelay()
 
