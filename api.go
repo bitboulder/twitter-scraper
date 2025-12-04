@@ -111,6 +111,7 @@ func (s *Scraper) GetGuestToken() error {
 		return err
 	}
 	req.Header.Set("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA")
+	s.setCSRFToken(req)
 
 	resp, err := s.client.Do(req)
 	if err != nil {
